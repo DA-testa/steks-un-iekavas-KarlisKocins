@@ -30,12 +30,25 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    if mismatch == 'Success':
-        print("Success")
+    input_choice = input("Ievadiet F vai I")
+    if input_choice == "F":
+        file_path = input("Ievadiet ceļu lidz failam: ")
+        with open("input.txt", "r") as f:
+            text = f.read()
+            mismatch = find_mismatch(text)
+            if mismatch == 'Success':
+                print("Success")
+            else:
+                print(mismatch)
+    elif input_choice == "I":
+        text = input()
+        mismatch = find_mismatch(text)
+        if mismatch == 'Success':
+            print("Success")
+        else:
+            print(mismatch)
     else:
-        print(mismatch)
+        print("Invalid input choice.")
 
 
 if __name__ == "__main__":
