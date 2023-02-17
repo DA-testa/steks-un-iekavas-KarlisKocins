@@ -33,7 +33,7 @@ def main():
     input_choice = input("Ievadiet F vai I")
     if input_choice == "F":
         file_path = input("Ievadiet ceļu lidz failam: ")
-        with open("input.txt", "r") as f:
+        with open(file_path, "r") as f:
             text = f.read()
             mismatch = find_mismatch(text)
             if mismatch == 'Success':
