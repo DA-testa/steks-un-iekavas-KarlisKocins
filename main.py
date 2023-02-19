@@ -31,7 +31,7 @@ def find_mismatch(text):
 
 def main():
     input_choice = input("Ievadiet F vai I: ")
-    if input_choice == "F":
+    if "F" in input_choice:
         file_path = input("Ievadiet ceļu lidz failam: ")
         with open(file_path, "r") as f:
             text = f.read()
@@ -40,7 +40,7 @@ def main():
                 print("Success")
             else:
                 print(mismatch)
-    elif input_choice == "I":
+    elif "I" in input_choice:
         text = input()
         mismatch = find_mismatch(text)
         if mismatch == 'Success':
