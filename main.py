@@ -30,7 +30,7 @@ def find_mismatch(text):
 
 
 def main():
-    input_choice = input("Ievadiet F vai I")
+    input_choice = input("Ievadiet F vai I: ")
     if input_choice == "F":
         file_path = input("Ievadiet ceļu lidz failam: ")
         with open(file_path, "r") as f:
